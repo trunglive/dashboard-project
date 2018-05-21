@@ -7,7 +7,7 @@ const ProjectCard = ({ budget, budget_type, client, name, color }) => (
         className="project-card__color"
         style={{ backgroundColor: `#${color}` }}
       >
-        <img className="project-card__icon" src="/icons/projects.svg" />
+        <img className="project-card__icon" src="/icons/projects-white.svg" />
       </div>
       <div className="project-name-and-client-name">
         <p className="project-name">{name}</p>

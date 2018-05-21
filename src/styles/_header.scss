@@ -83,7 +83,7 @@
     margin-right: 5px;
   }
 
-  .new-project {
+  .new-project-button {
     display: flex;
     align-items: center;
     padding: 1.2rem 2rem;
@@ -103,4 +103,57 @@
       margin-right: 5px;
     }
   }
+}
+
+.new-project-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 10rem 2rem 20rem;
+  background-color: $color-bg-2;
+
+  &__bag-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 1rem;
+  }
+
+  &__close-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.bag-group {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+.new-project-form {
+  padding: 2rem 10rem 2rem 20rem;
+}
+
+.project-name-group {
+  .project-name {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 40rem;
+    height: 3rem;
+  }
+}
+
+.project-color-group {
+  
 }

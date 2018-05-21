@@ -44,9 +44,9 @@ class Header extends Component {
             <img className="person-icon" src="/icons/person.svg" />
             <span>Manage clients</span>
           </div>
-          <div className="new-project" onClick={this.openModal}>
+          <div className="new-project-button" onClick={this.openModal}>
             <img
-              className="new-project__plus-sign-icon"
+              className="new-project-button__plus-sign-icon"
               src="/icons/plus-sign.svg"
             />
             <span>New project</span>
@@ -60,16 +60,37 @@ class Header extends Component {
           className="new-project-modal-container"
           contentLabel="modal for new project"
         >
-          <form>
-            <div className="new-project-group" />
-            <div className="project-name-group" />
-            <div className="project-color-group" />
-            <div className="client-group" />
-            <div className="tags-group" />
-            <div className="hourly-rate-group" />
-            <div className="budget-group" />
-            <div className="submit-button-group" />
-          </form>
+          <div className="project-modal">
+            <div className="new-project-group">
+              <div className="bag-group">
+                <img
+                  className="new-project-group__bag-icon"
+                  src="/icons/projects-black.svg"
+                />
+                <span>New Project</span>
+              </div>
+              <img
+                onClick={this.closeModal}
+                className="new-project-group__close-icon"
+                src="/icons/close.svg"
+              />
+            </div>
+            <form className="new-project-form" id="new-project-form">
+              <div className="project-name-group">
+                <label labelFor="project-name" className="project-name">Project name</label>
+                <input type="text" id="project-name" name="projectName" />
+              </div>
+              <div className="project-color-group">
+              <label labelFor="project-color">Project color</label>
+              <input type="" />
+              </div>
+              <div className="client-group" />
+              <div className="tags-group" />
+              <div className="hourly-rate-group" />
+              <div className="budget-group" />
+              <div className="submit-button-group" />
+            </form>
+          </div>
         </NewProjectModal>
       </div>
     );

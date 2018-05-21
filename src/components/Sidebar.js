@@ -11,7 +11,7 @@ class Sidebar extends Component {
           <p>hours</p>
         </div>
         <div className="sidebar__projects">
-          <img className="sidebar__icon" src="/icons/projects.svg" />
+          <img className="sidebar__icon" src="/icons/projects-white.svg" />
           <p>projects</p>
         </div>
         <div className="sidebar__people">

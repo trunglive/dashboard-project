@@ -8,12 +8,16 @@
 
   &__brand {
     font-size: 3.6rem;
+    margin-bottom: 2rem;
   }
 
   &__intro {
-    margin-top: 2rem;
     font-size: 1.8rem;
     color: $color-dark-1;
+
+    &--top {
+      margin-bottom: 1rem;
+    }
   }
 }
 
