@@ -4,7 +4,7 @@
   align-items: center;
   height: 100vh;
   color: #fff;
-  background-color: $color-bg-1;
+  background-color: $color-sidebar-1;
 
   &__brand {
     font-size: 3.6rem;
@@ -13,13 +13,13 @@
   &__intro {
     margin-top: 2rem;
     font-size: 1.8rem;
-    color: $color-grey-4;
+    color: $color-dark-1;
   }
 }
 
 .home .content {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .enter-button {
