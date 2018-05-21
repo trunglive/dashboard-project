@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ProjectDashboard extends Component {
   render() {
     return (
-      <div>
-        <div>
-          main dashboard for projects
-        </div>
+      <div className="project-dashboard">
+        <div>main content for projects</div>
       </div>
-    )
+    );
   }
 }
 
