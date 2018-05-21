@@ -1,7 +1,7 @@
 .dashboard-container {
   display: grid;
   grid-template-columns: 7rem minmax(min-content, 1fr);
-  grid-template-rows: 16rem minmax(min-content, 1fr);
+  grid-template-rows: minmax(min-content, 18rem) min-content;
   height: 100vh;
   background-color: $color-bg-1;
 }
