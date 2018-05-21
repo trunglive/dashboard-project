@@ -16,7 +16,14 @@ const ProjectCard = ({ budget, budget_type, client, name, color }) => (
     </div>
 
     <div className="project-card-group-bottom">
-      <div className="project-card__progress"></div>
+      <div
+        className={
+          budget_type === "N"
+            ? "project-card__progress no-budget"
+            : "project-card__progress"
+        }
+      />
+
       <div className="project-card__budget">
         {budget_type === "M" && `$${budget} left`}
         {budget_type === "T" && `${budget}:00 left`}

@@ -36,7 +36,7 @@ class ProjectDashboard extends Component {
               <ProjectCard {...project} key={project.id} />
             ))
           ) : (
-            <img src="/icons/spinner.svg" />
+            <img className="spinner" src="/icons/spinner.svg" />
           )}
         </div>
       </div>

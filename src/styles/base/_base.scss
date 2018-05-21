@@ -12,11 +12,9 @@ html {
 }
 
 body {
+  max-width: 160rem;
+  margin: 0 auto;
   font-family: $font-primary;
   font-size: 1.3rem;
   color: $color-font-primary;
-}
-
-.app {
-  border: 1px solid red;
 }

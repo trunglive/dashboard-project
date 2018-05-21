@@ -58,6 +58,10 @@
     border-radius: 5rem;
   }
 
+  .no-budget {
+    background-color: #fff;
+  }
+
   &__budget {
     color: $color-font-secondary;
     font-size: 1.2rem;
@@ -88,6 +92,13 @@
   display: flex;
   align-items: center;
   margin-top: 1.8rem;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
