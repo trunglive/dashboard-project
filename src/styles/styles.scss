@@ -1,24 +1,4 @@
 @import "./base/settings";
 @import "./base/base";
 
-@import "./homepage/homepage";
-
-@import "./sidebar/sidebar.scss";
-@import "./sidebar/filter/filter";
-@import "./sidebar/filter/checkbox";
-@import "./sidebar/about-us/about-us";
-
-@import "./nav-scrolling/nav-scrolling";
-@import "./modal/modal-animation";
-
-@import "./header/header";
-
-@import "./collection-grid-page/collection";
-@import "./collection-grid-page/select-dropdown";
-
-@import "./single-item-page/single-item";
-@import "./single-item-page/checkout/checkout-menu";
-
-@import './checkout-page/checkout-page';
-
-@import "./footer/footer";
+@import "./home";

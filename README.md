@@ -14,13 +14,13 @@
 **Clone the project**
 
 ```shell
-$ git clone https://github.com/trunglive/paperan-shopping.git
+$ git clone https://github.com/trunglive/dashboard-project.git
 ```
 
 **Run the app**
 
 ```shell
-$ cd paperan-shopping
+$ cd dashboard-app
 $ yarn install
 $ yarn start
 ```

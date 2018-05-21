@@ -8,14 +8,18 @@ import AppRouter from "./routers/AppRouter";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 
-const { store, persistor } = configureStore();
+// const { store, persistor } = configureStore();
+
+// const app = (
+//   <Provider store={store}>
+//     <PersistGate loading={null} persistor={persistor}>
+//       <AppRouter />
+//     </PersistGate>
+//   </Provider>
+// );
 
 const app = (
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <AppRouter />
-    </PersistGate>
-  </Provider>
-);
+  <AppRouter />
+)
 
 render(app, document.getElementById("app"));

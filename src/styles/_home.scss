@@ -1,0 +1,33 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  background-color: $color-bg-1;
+
+  &__brand {
+    font-size: 3.6rem;
+  }
+
+  &__intro {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: $color-grey-4;
+  }
+}
+
+.home .content {
+  display: flex;
+  align-items: center;
+}
+
+.enter-button {
+  height: 100%;
+  margin-left: 6rem;
+  padding: 1rem 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: $color-green;
+  border-radius: 4px;
+}
