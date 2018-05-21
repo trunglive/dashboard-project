@@ -1,7 +1,94 @@
 .project-dashboard,
 .project-list {
   grid-column: 2 / -1;
-  
-  border: 1px solid red;
+  padding: 0 10rem;
 }
+
+.project-dashboard {
+  &__title {
+    margin-bottom: 2rem;
+    color: $color-font-primary;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+.all-project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 31rem));
+  grid-gap: 2rem;
+  
+}
+
+.project-card {
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 1px solid $color-grey-4;
+  border-radius: 5px;
+  box-shadow: 1rem 1.5rem 6rem -1rem rgba(0,0,0,0.1);
+  transition: box-shadow .7s ease-out;
+
+  &:hover {
+    border: 1px solid $color-grey-2;
+    box-shadow: 1rem 3.5rem 6rem -1rem rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+
+  &__color {
+    position: relative;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 4px;
+  }
+  
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &__progress {
+    height: 1.3rem;
+    width: 20rem;
+    margin-right: 1.5rem;
+    background-color: $color-grey-1;
+    border-radius: 5rem;
+  }
+
+  &__budget {
+    color: $color-font-secondary;
+    font-size: 1.2rem;
+  }
+}
+
+.project-card-group-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+.project-name-and-client-name {
+  margin-left: 1rem;
+
+  .project-name {
+    color: $color-font-secondary;
+    font-weight: 600;
+  }
+
+  .client-name {
+    margin-top: 2px;
+    color: rgba($color-font-secondary, 0.6);
+    font-size: 1.2rem;
+  }
+}
+
+.project-card-group-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 1.8rem;
+}
+
+
 
