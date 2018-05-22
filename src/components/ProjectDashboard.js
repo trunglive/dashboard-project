@@ -24,7 +24,7 @@ class ProjectDashboard extends Component {
 
   render() {
     const { projects } = this.state;
-    console.log(projects);
+
     return (
       <div className="project-dashboard">
         <div className="project-dashboard__title">

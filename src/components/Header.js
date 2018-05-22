@@ -8,7 +8,8 @@ class Header extends Component {
   state = {
     isModalOpen: false,
     selectedColorOption: "",
-    selectedClientOption: ""
+    selectedClientOption: "",
+    budgetType: "no budget"
   };
 
   openModal = () => {
@@ -31,17 +32,22 @@ class Header extends Component {
     this.setState({ selectedClientOption });
   };
 
+  handleBudgetChange = e => {
+    this.setState({
+      budgetType: e.target.value
+    });
+  };
+
   render() {
     const {
       isModalOpen,
       selectedColorOption,
-      selectedClientOption
+      selectedClientOption,
+      budgetType
     } = this.state;
 
     const colorVal = selectedColorOption && selectedColorOption.value;
     const clientVal = selectedClientOption && selectedClientOption.value;
-
-    console.log(clientVal);
 
     return (
       <div className="header">
@@ -157,8 +163,60 @@ class Header extends Component {
                   per person / hour
                 </label>
               </div>
-              <div className="budget-group" />
-              <div className="submit-button-group" />
+              <div className="budget-group">
+                <p className="budget field-title">Budget</p>
+
+                <div className="radio-budget-group">
+                  <input
+                    type="radio"
+                    id="budget1"
+                    name="budget"
+                    value="no budget"
+                    onChange={this.handleBudgetChange}
+                  />
+                  <label labelFor="budget1" className="label-radio-text">
+                    No budget
+                  </label>
+
+                  <input
+                    type="radio"
+                    id="budget2"
+                    name="budget"
+                    value="time budget"
+                    onChange={this.handleBudgetChange}
+                  />
+                  <label labelFor="budget2" className="label-radio-text">
+                    Time budget
+                  </label>
+
+                  <input
+                    type="radio"
+                    id="budget3"
+                    name="budget"
+                    value="money budget"
+                    onChange={this.handleBudgetChange}
+                  />
+                  <label labelFor="budget3" className="label-radio-text">
+                    Money budget
+                  </label>
+                </div>
+                {budgetType !== "no budget" && (
+                  <label className="label-text">
+                    <input
+                      className="total-budget-input"
+                      type="number"
+                      id="total-budget"
+                      name="totalBudget"
+                      required
+                    />
+                    {`total ${budgetType}`}
+                  </label>
+                )}
+              </div>
+              <div className="submit-button-group">
+                <div className="submit-button">Create</div>
+                <p className="cancel-button">Cancel</p>
+              </div>
             </form>
           </div>
         </NewProjectModal>

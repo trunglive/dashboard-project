@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const ProjectCard = ({ budget, budget_type, client, name, color }) => (
   <div className="project-card">

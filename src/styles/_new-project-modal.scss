@@ -71,6 +71,7 @@
 .client-group {
   .client-select-field {
     width: 40rem;
+    font-weight: 300;
   }
 }
 
@@ -88,4 +89,41 @@
   color: $color-grey-5;
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+.label-radio-text {
+  margin-left: 0.7rem;
+  margin-right: 2rem;
+}
+
+.radio-budget-group {
+  margin-bottom: 1.5rem;
+}
+
+.total-budget-input {
+  width: 18rem;
+  height: 3.5rem;
+  margin-right: 1rem;
+}
+
+.submit-button-group {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+
+  .submit-button {
+    padding: 1.2rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: $color-green;
+    border-radius: 4px;
+  }
+
+  .cancel-button {
+    margin-left: 2rem;
+  }
+
+  &:hover {
+    cursor: not-allowed;
+  }
 }
