@@ -1,47 +1,27 @@
-import React, { Component } from "react";
-import { database } from "../firebase";
+import React from "react";
+
+import Projects from "./Projects";
 import ProjectCard from "./ProjectCard";
 
-class ProjectDashboard extends Component {
-  state = {
-    projects: []
-  };
-
-  componentDidMount() {
-    database.ref("timely/dashboard/projects").on("value", snapshot => {
-      const projects = [];
-
-      snapshot.forEach(childSnapshot => {
-        projects.push({
-          firebaseProjectId: childSnapshot.key,
-          ...childSnapshot.val()
-        });
-      });
-
-      this.setState({ projects });
-    });
-  }
-
-  render() {
-    const { projects } = this.state;
-
-    return (
-      <div className="project-dashboard">
-        <div className="project-dashboard__title">
-          Recent and pinned projects
-        </div>
-        <div className="all-project-cards">
-          {projects.length > 0 ? (
-            projects.map(project => (
-              <ProjectCard {...project} key={project.id} />
-            ))
-          ) : (
-            <img className="spinner" src="/icons/spinner.svg" />
-          )}
-        </div>
-      </div>
-    );
-  }
-}
+const ProjectDashboard = () => (
+  <div className="project-dashboard">
+    <div className="project-dashboard__title">Recent and pinned projects</div>
+    <div className="all-project-cards">
+      {
+        <Projects
+          render={projects =>
+            projects.length > 0 ? (
+              projects.map(project => (
+                <ProjectCard {...project} key={project.id} />
+              ))
+            ) : (
+              <img className="spinner" src="/icons/spinner.svg" />
+            )
+          }
+        />
+      }
+    </div>
+  </div>
+);
 
 export default ProjectDashboard;

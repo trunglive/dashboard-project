@@ -1,4 +1,43 @@
 .project-list {
   padding: 3rem;
-  border: 1px solid red;
+  background-color: #fff;
+  border: 1px solid $color-grey-4;
+  border-radius: 4px;
+
+  &__title {
+    display: flex;
+    color: $color-dark-2;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    &--name {
+      width: 40%;
+      border: 1px solid blue;
+    }
+
+    &--logged-hours {
+      width: 15%;
+      border: 1px solid blue;
+    }
+
+    &--budget {
+      width: 7%;
+      border: 1px solid blue;
+    }
+
+    &--budget-spent {
+      width: 23%;
+      border: 1px solid blue;
+    }
+
+    &--budget-left {
+      width: 10%;
+      border: 1px solid blue;
+    }
+  }
+}
+
+.project-row {
+  margin-top: 1rem;
+  border-top: 1px solid $color-grey-4;
 }
