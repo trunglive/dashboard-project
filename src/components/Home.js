@@ -7,11 +7,13 @@ class Home extends Component {
       <div className="home">
         <div className="content">
           <div>
-            <p className="home__brand">Timely</p>
+            <p className="home__brand">Project</p>
             <p className="home__intro home__intro--top">
-              A subset of UI and functionality of Project TAB
+              Subset of UI and functionality
             </p>
-            <p className="home__intro home__intro--bottom">from Timely Dashboard</p>
+            <p className="home__intro home__intro--bottom">
+              of Project TAB from Timely Dashboard
+            </p>
           </div>
 
           <Link to="/projects/dashboard" className="enter-button">

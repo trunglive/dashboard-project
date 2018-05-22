@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import NewProjectModal from "react-modal";
+import Select from "react-select";
+import "react-select/dist/react-select.css";
 
 class Header extends Component {
   state = {
-    isModalOpen: false
+    isModalOpen: false,
+    selectedColorOption: "",
+    selectedClientOption: ""
   };
 
   openModal = () => {
@@ -19,8 +23,25 @@ class Header extends Component {
     });
   };
 
+  handleColorChange = selectedColorOption => {
+    this.setState({ selectedColorOption });
+  };
+
+  handleClientChange = selectedClientOption => {
+    this.setState({ selectedClientOption });
+  };
+
   render() {
-    const { isModalOpen } = this.state;
+    const {
+      isModalOpen,
+      selectedColorOption,
+      selectedClientOption
+    } = this.state;
+
+    const colorVal = selectedColorOption && selectedColorOption.value;
+    const clientVal = selectedClientOption && selectedClientOption.value;
+
+    console.log(clientVal);
 
     return (
       <div className="header">
@@ -77,16 +98,65 @@ class Header extends Component {
             </div>
             <form className="new-project-form" id="new-project-form">
               <div className="project-name-group">
-                <label labelFor="project-name" className="project-name">Project name</label>
-                <input type="text" id="project-name" name="projectName" />
+                <p className="project-name field-title">Project name</p>
+                <input
+                  type="text"
+                  id="project-name"
+                  name="projectName"
+                  required
+                />
               </div>
               <div className="project-color-group">
-              <label labelFor="project-color">Project color</label>
-              <input type="" />
+                <p className="project-color field-title">Project color</p>
+                <label className="label-text">
+                  <Select
+                    className="project-color-select-field"
+                    name="project-color-field"
+                    value={colorVal}
+                    onChange={this.handleColorChange}
+                    options={[
+                      { value: "47b17c", label: "Green" },
+                      { value: "67a3bc", label: "Blue" },
+                      { value: "bd4c4f", label: "Red" },
+                      { value: "d0915a", label: "Orange" },
+                      { value: "866b9c", label: "Dark Purple" },
+                      { value: "cdae4f", label: "Yellow" },
+                      { value: "5ab8b7", label: "Cyan" },
+                      { value: "c697c0", label: "Light Purple" }
+                    ]}
+                  />
+                  Colors make it easy to tell projects apart
+                </label>
               </div>
-              <div className="client-group" />
-              <div className="tags-group" />
-              <div className="hourly-rate-group" />
+              <div className="client-group">
+                <p className="client field-title">Client</p>
+                <Select
+                  className="client-select-field"
+                  name="client-field"
+                  value={clientVal}
+                  onChange={this.handleClientChange}
+                  options={[
+                    { value: "Aerlie", label: "Aerlie" },
+                    { value: "Heliur", label: "Heliur" },
+                    { value: "Jasteri", label: "Jasteri" },
+                    { value: "Liseras", label: "Liseras" },
+                    { value: "Valesa", label: "Valesa" }
+                  ]}
+                />
+              </div>
+              <div className="hourly-rate-group">
+                <p className="hourly-rate field-title">Hourly rate</p>
+                <label className="label-text">
+                  <input
+                    type="number"
+                    id="hourly-rate"
+                    name="hourlyRate"
+                    min="15"
+                    required
+                  />
+                  per person / hour
+                </label>
+              </div>
               <div className="budget-group" />
               <div className="submit-button-group" />
             </form>

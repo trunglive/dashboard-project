@@ -6,3 +6,86 @@
   height: 100%;
   background-color: #fff;
 }
+
+.new-project-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 10rem 2rem 20rem;
+  background-color: $color-bg-2;
+
+  &__bag-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 1rem;
+  }
+
+  &__close-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.bag-group {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+.new-project-form {
+  padding: 2rem 10rem 2rem 20rem;
+
+  > div {
+    margin-bottom: 2rem;
+  }
+}
+
+.field-title {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.project-name-group {
+  input {
+    width: 50rem;
+    height: 3.5rem;
+  }
+}
+
+.project-color-group {
+  .project-color-select-field {
+    width: 12rem;
+    margin-right: 1rem;
+  }
+}
+
+.client-group {
+  .client-select-field {
+    width: 40rem;
+  }
+}
+
+.hourly-rate-group {
+  input {
+    width: 15rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.label-text {
+  display: flex;
+  align-items: center;
+  color: $color-grey-5;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
