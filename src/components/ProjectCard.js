@@ -4,10 +4,10 @@ const ProjectCard = ({ budget, budget_type, client, name, color }) => (
   <div className="project-card">
     <div className="project-card-group-top">
       <div
-        className="project-card__color"
+        className="project-card__color square-color"
         style={{ backgroundColor: `#${color}` }}
       >
-        <img className="project-card__icon" src="/icons/projects-white.svg" />
+        <img className="project-card__icon bag-icon" src="/icons/projects-white.svg" />
       </div>
       <div className="project-name-and-client-name">
         <p className="project-name">{name}</p>

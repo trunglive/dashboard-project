@@ -1,11 +1,15 @@
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
   grid-row: 1 / -1;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  height: 100vh;
+  padding: 0.8rem;
   font-size: 1rem;
   color: $color-dark-2;
   text-align: center;

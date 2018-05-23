@@ -1,7 +1,7 @@
 .project-dashboard,
 .project-list {
   grid-column: 2 / -1;
-  margin: 0 10rem;
+  margin: 20rem 10rem 4rem;
 }
 
 .project-dashboard {
@@ -31,22 +31,6 @@
     border: 1px solid $color-grey-2;
     box-shadow: 1rem 3.5rem 6rem -1rem rgba(0, 0, 0, 0.1);
     cursor: not-allowed;
-  }
-
-  &__color {
-    position: relative;
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 4px;
-  }
-
-  &__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1.8rem;
-    height: 1.8rem;
   }
 
   &__progress {
@@ -82,8 +66,8 @@
 
   .client-name {
     margin-top: 2px;
-    color: rgba($color-font-secondary, 0.6);
     font-size: 1.2rem;
+    color: rgba($color-font-secondary, 0.6);
   }
 }
 
@@ -98,4 +82,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.square-color {
+  position: relative;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 4px;
+}
+
+.bag-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.8rem;
+  height: 1.8rem;
 }
