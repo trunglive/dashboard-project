@@ -2,6 +2,9 @@ import React, { Component } from "react";
 
 const WithNewProject = WrappedComponent =>
   class extends Component {
+    static displayName = `With(${WrappedComponent.displayName ||
+      WrappedComponent.name})`;
+
     state = {
       isModalOpen: false,
       selectedColorOption: "",
@@ -24,7 +27,6 @@ const WithNewProject = WrappedComponent =>
     };
 
     render() {
-      console.log(this.state.modalState)
       return (
         <WrappedComponent
           {...this.state}
