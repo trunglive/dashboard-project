@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const WithNewProject = WrappedComponent =>
   class extends Component {
-    static displayName = `With(${WrappedComponent.displayName ||
+    static displayName = `WithNewProject(${WrappedComponent.displayName ||
       WrappedComponent.name})`;
 
     state = {

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../components/Home";
 import ProjectDashboard from "../components/ProjectDashboard";
 import ProjectList from "../components/ProjectList";
-
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 
