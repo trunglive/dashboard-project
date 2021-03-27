@@ -1,6 +1,6 @@
 #### Dashboard
 * This is my attempt to replicate a part of the tab PROJECTS in Timely dashboard.
-* Some UIs are avaiable in this demo: Tab **Dashboard**, Tab **All Projects**, **+ New project**
+* Some UIs are available in this demo: Tab **Dashboard**, Tab **All Projects**, **+ New project**
 
 #### Demo
 https://dashboard-39073.firebaseapp.com
