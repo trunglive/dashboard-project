@@ -1,8 +1,10 @@
 #### Dashboard
-> This is my attempt to replicate a part of the tab PROJECTS in Timely dashboard.
+* This is my attempt to replicate a part of the tab PROJECTS in Timely dashboard.
+* Some UIs are avaiable in this demo: Tab **Dashboard**, Tab **All Projects**, **+ New project**
 
 #### Demo
 https://dashboard-39073.firebaseapp.com
+
 #### Stack
 
 * [React](https://github.com/facebook/react)
@@ -10,8 +12,6 @@ https://dashboard-39073.firebaseapp.com
 * [Redux](https://github.com/reactjs/redux)
 * [Redux Persist](https://github.com/rt2zz/redux-persist)
 * [Firebase](https://firebase.google.com/)
-
-#### Quick Start
 
 **Clone the project**
 
