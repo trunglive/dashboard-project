@@ -1,6 +1,8 @@
 #### Dashboard
 > This is my attempt to replicate a part of the tab PROJECTS in Timely dashboard.
 
+#### Demo
+https://dashboard-39073.firebaseapp.com
 #### Stack
 
 * [React](https://github.com/facebook/react)
